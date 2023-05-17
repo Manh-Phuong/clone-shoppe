@@ -1,0 +1,172 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color: #e34b21;
+    --border-color: #dbdbdb;
+    --star-color: #ffcc00;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* Responsive */
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full_width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -6px;
+    margin-right: -6px;
+}
+
+/* Test */
+.grid__column-2 {
+    padding-left: 6px;
+    padding-right: 6px;
+    width: 16.66667%;
+}
+
+.grid__column-2-4 {
+    padding-left: 6px;
+    padding-right: 6px;
+    width: 20%;
+    margin-bottom: 12px;
+}
+
+.grid__column-10 {
+    padding-left: 6px;
+    padding-right: 6px;
+    width: 83.33333%;
+}
+
+/* animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+ /* Modal */
+ .modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+ }
+
+ .modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+ }
+
+ .modal__body {
+    background-color: var(--white-color);
+    position: relative;
+    margin: auto;
+    border-radius: 6px;
+    z-index: 1;
+ }
+
+ /* Button style */
+.btn {
+    min-width: 142px;
+    height: 36px;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    outline: none;
+    background-color: var(--white-color);
+}
+
+.btn-hover {
+    background-color:  #fffbfb;
+    font-weight: 500;
+}
+
+.btn-hover:hover {
+    background-color: #f0f0f0;
+}
+
+.btn.btn--primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn-disable {
+    background-color: #f8f8f8;
+    cursor: default;
+}
+
+.box-shadow {
+    box-shadow: -1px 1px 1px #dedddd, 1px 1px 1px #dedddd;
+}
+
+/* app__container */
+.app__container {
+    background-color: #F5F5F5;
+    padding-bottom: 60px;
+    border-bottom: 4px solid #ee4d2d;
+}
+
+
+/* pagination */
+.pagination {
+    list-style: none;
+    display: flex;
+}
+
+.pagination-item {
+    margin: 0 15px;
+    min-width: 40px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+.pagination-item__link {
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: 2rem;
+    display: block;
+    color: #939393;
+}
+
+.pagination-item--active {
+    background-color: #ee4d2d;
+}
+
+.pagination-item--active a {
+    color: var(--white-color);
+}
